@@ -93,10 +93,8 @@ export default async function EventPageController({ params }: { params: EventPar
     name: data.eventData.title,
     startDate: data.eventData.start_date,
     endDate: data.eventData.end_date,
-    location: {
-      "@type": "VirtualLocation",
-      name: "Zoom",
-    },
+    eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
     image: image,
     description: stripHtml(data.eventData.summary).result,
     organizer: {
